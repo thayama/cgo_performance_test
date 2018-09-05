@@ -18,7 +18,7 @@ void logger(char *body) {
 
 	if (body == NULL) {
 		msg.body = buf;
-		strcpy(buf, default_msg);
+		snprintf(buf, sizeof(buf), "%s", default_msg);
 	}
 
 	GoLog(&msg);
@@ -26,11 +26,14 @@ void logger(char *body) {
 
 void logger2(char *body) {
 	struct msg msg;
+	static char buf[256];
 
 	clock_gettime(CLOCK_REALTIME, &msg.time);
 
-	if (body == NULL)
-		msg.body = default_msg;
+	if (body == NULL) {
+		msg.body = buf;
+		snprintf(buf, sizeof(buf), "%s", default_msg);
+	}
 
 	GoLog2(&msg);
 }
