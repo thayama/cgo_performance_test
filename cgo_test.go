@@ -26,16 +26,8 @@ func BenchmarkCallGoFromCNop(b *testing.B) {
 	}
 }
 
-/*
-func BenchmarkCallGo(b *testing.B) {
+func BenchmarkCallGoFromCNop2(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		GoFunction(0)
+		CallCFunctionNop2()
 	}
 }
-
-func BenchmarkCallGo2(b *testing.B) {
-	for i := 0; i < b.N; i++ {
-		GoFunction2(0)
-	}
-}
-*/

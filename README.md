@@ -14,6 +14,8 @@ message is collected with channel.
  * Pass dynamically allocated message to Go.
 * BenchmarkCallGoFromCNop
  * NOP. Measure base perforamnce of calling C from Go.
+* BenchmarkCallGoFromCNop2
+ * NOP. Measure base perforamnce of calling C from Go, and then Go from that C.
 
 This benchmark calls C functions from Go. So the base measurement for NOP
 must be subtracted frmo each benchamrk.

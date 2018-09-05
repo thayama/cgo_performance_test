@@ -8,6 +8,7 @@ extern void logger(char *);
 extern void logger2(char *);
 extern void logger3(char *);
 extern void nop();
+extern void gonop();
 
 struct msg {
 	struct timespec time;

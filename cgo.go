@@ -33,6 +33,9 @@ func GoLog3(msg *C.struct_msg) {
 	ch3 <- msg
 }
 
+//export GoNop
+func GoNop() {}
+
 var count = 0
 
 func CallCFunction() {
@@ -49,6 +52,10 @@ func CallCFunction3() {
 
 func CallCFunctionNop() {
 	C.nop()
+}
+
+func CallCFunctionNop2() {
+	C.gonop()
 }
 
 var ch = make(chan *C.struct_msg, 10000)

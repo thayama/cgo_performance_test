@@ -7,6 +7,7 @@
 extern void GoLog(struct msg *);
 extern void GoLog2(struct msg *);
 extern void GoLog3(struct msg *);
+extern void GoNop();
 
 static char *default_msg = "This is a test";
 
@@ -50,4 +51,8 @@ void logger3(char *body) {
 }
 
 void nop() {
+}
+
+void gonop() {
+	GoNop();
 }
